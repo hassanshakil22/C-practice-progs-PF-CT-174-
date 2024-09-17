@@ -3,65 +3,67 @@
 
 int main(){
 
-// int num1,num2,temp ;
-// printf("give first number --> ");
-// scanf("%d",&num1);
-// printf("give second number --> ");
-// scanf("%d",&num2);
-// printf("your given numbers are : \n num1 ---> %d \n" ,num1  );
-// printf("num2 ---> %d \n" ,num2);
-// char userChoice;
-// printf("do you want to swap numbers ? (y/n) \n\n");
-// scanf(" %c", &userChoice);
-// if (userChoice == 'y')
-// {
-//     temp = num1;
-//     num1 = num2;
-//     num2 = temp;
-// printf("your swapped numbers are : \nnum1 ---> %d \n" ,num1  );
-// printf("num2 ---> %d" ,num2);
-// }
-// else
-// {
-// printf("your Unswapped numbers are : \n num1 ---> %d \n" ,num1  );
-// printf("num2 ---> %d" ,num2);
-// }
-// ---------------------------
-// float salary,taxRate,payableTax,salarAfterTax;
-// printf("please write your salary --> ");
-// scanf("%f",&salary);
-// printf("please mention the tax rate in your country  --> \n");
-// scanf(" %f",&taxRate);
-// taxRate= taxRate/100; // tax rate in %
-// payableTax = salary*taxRate;
-// salarAfterTax= salary-payableTax;
-// printf("your tax is --> %f Rs\n " ,payableTax);
-// printf("your salary after tax deduction is --> %f Rs " ,salarAfterTax);
+int num1,num2,temp ;
+printf("give first number --> ");
+scanf("%d",&num1);
+printf("give second number --> ");
+scanf("%d",&num2);
+printf("your given numbers are : \n num1 ---> %d \n" ,num1  );
+printf("num2 ---> %d \n" ,num2);
+char userChoice;
+printf("do you want to swap numbers ? (y/n) \n\n");
+scanf(" %c", &userChoice);
+if (userChoice == 'y')
+{
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+printf("your swapped numbers are : \nnum1 ---> %d \n" ,num1  );
+printf("num2 ---> %d" ,num2);
+}
+else
+{
+printf("your Unswapped numbers are : \n num1 ---> %d \n" ,num1  );
+printf("num2 ---> %d" ,num2);
+}
 
 // ---------------------------
 
-// int time  ;
-// printf("how much time did the car travelled for in hours? (choose betwen 1/5) : \n");
-// scanf(" %d" , &time);
-// while (time <1 || time>5)
-// {
-// printf("time should be greater 0 and less than 5 , try again \n\n");
-// printf("how much time did the car travelled for in hours? (choose betwen 1/5) : \n");
-// scanf(" %d" , &time);
-// }
+float salary,taxRate,payableTax,salarAfterTax;
+printf("please write your salary --> ");
+scanf("%f",&salary);
+printf("please mention the tax rate in your country  --> \n");
+scanf(" %f",&taxRate);
+taxRate= taxRate/100; // tax rate in %
+payableTax = salary*taxRate;
+salarAfterTax= salary-payableTax;
+printf("your tax is --> %f Rs\n " ,payableTax);
+printf("your salary after tax deduction is --> %f Rs " ,salarAfterTax);
+
+// ---------------------------
+
+int time  ;
+printf("how much time did the car travelled for in hours? (choose betwen 1/5) : \n");
+scanf(" %d" , &time);
+while (time <1 || time>5)
+{
+printf("time should be greater 0 and less than 5 , try again \n\n");
+printf("how much time did the car travelled for in hours? (choose betwen 1/5) : \n");
+scanf(" %d" , &time);
+}
 
 
-// int distance=0;
-// int TotalDistance=0;
+int distance=0;
+int TotalDistance=0;
     
-//     for (size_t i = 1 ; i <= time; i++)
-//     {
-//         printf("enter the time travelled by the car in %d hour \n" , i);
-//         scanf(" %d" , &distance);
-//         TotalDistance=TotalDistance + distance;
-//         }
-//     printf ("total distance covered by the car --> %d \n" ,TotalDistance);
-//     printf("Average speed of the car throuhgout the covered distance is --> %d" , TotalDistance/time);
+    for (size_t i = 1 ; i <= time; i++)
+    {
+        printf("enter the time travelled by the car in %d hour \n" , i);
+        scanf(" %d" , &distance);
+        TotalDistance=TotalDistance + distance;
+        }
+    printf ("total distance covered by the car --> %d \n" ,TotalDistance);
+    printf("Average speed of the car throuhgout the covered distance is --> %d" , TotalDistance/time);
 
 // --------------------------
 int principleValue = 0;
