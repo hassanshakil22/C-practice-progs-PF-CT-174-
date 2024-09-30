@@ -64,23 +64,53 @@ void main(){
 // printf("Congrats ! , You saved :  %.2f Rs\n" ,  savedAmmount  );
 
 
-// --------------
+// --------------------------------------------------------------------------------------
 
-float a,b,c;
-printf("Enter values \na = ");
-scanf("%d",&a);
-printf("b = ");
-scanf("%d",&b);
-printf("c = ");
-scanf("%d",&c);
+// float a,b,c;
+// printf("Enter values \na = ");
+// scanf("%d",&a);
+// printf("b = ");
+// scanf("%d",&b);
+// printf("c = ");
+// scanf("%d",&c);
 
-float discriminant = (b * b) - (4 * a * c);
-if (discriminant < 0) {
-    // Handle case where the roots are imaginary
-    printf("The roots are imaginary.\n");
-} else {
-    float root1 = (-b + sqrt(discriminant)) / (2 * a);
-    float root2 = (-b - sqrt(discriminant)) / (2 * a);
-    printf("Root 1: %.2f\n", root1);
-    printf("Root 2: %.2f\n", root2);
+// float discriminant = (b * b) - (4 * a * c);
+// if (discriminant < 0) {
+//     // Handle case where the roots are imaginary
+//     printf("The roots are imaginary.\n");
+// } else {
+//     float root1 = (-b + sqrt(discriminant)) / (2 * a);
+//     float root2 = (-b - sqrt(discriminant)) / (2 * a);
+//     printf("Root 1: %.2f\n", root1);
+//     printf("Root 2: %.2f\n", root2);
+
+// ------------------------------------------------------------------------
+
+int number;
+printf("Enter Any number : ");
+scanf(" %d",&number);
+
+int lastDigit= number%10;
+if (lastDigit!= 7 )
+{
+while (number!= 7 && number!= -7)
+{lastDigit= number%10;
+    lastDigit=lastDigit*2;
+    number=number/10;
+    printf("%d - %d \n",number,lastDigit);
+    number = number-lastDigit  ;
+
+}
+    
+   printf("%d divisible by 7",number);
+
+}
+else
+{
+   printf("Already divisible by 7");
+}
+
+
+
+
 }
