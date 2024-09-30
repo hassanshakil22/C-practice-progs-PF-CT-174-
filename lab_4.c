@@ -86,29 +86,70 @@ void main(){
 
 // ------------------------------------------------------------------------
 
-int number;
-printf("Enter Any number : ");
-scanf(" %d",&number);
+// int number;
+// printf("Enter Any number : ");
+// scanf(" %d",&number);
 
-int lastDigit= number%10;
-if (lastDigit!= 7 )
-{
-while (number!= 7 && number!= -7)
-{lastDigit= number%10;
-    lastDigit=lastDigit*2;
-    number=number/10;
-    printf("%d - %d \n",number,lastDigit);
-    number = number-lastDigit  ;
+// int lastDigit= number%10;
+// if (lastDigit!= 7 )
+// {
+// while (number!= 7 && number!= -7)
+// {lastDigit= number%10;
+//     lastDigit=lastDigit*2;
+//     number=number/10;
+//     printf("%d - %d \n",number,lastDigit);
+//     number = number-lastDigit  ;
 
-}
+// }
     
-   printf("%d divisible by 7",number);
+//    printf("%d divisible by 7",number);
 
+// }
+// else
+// {
+//    printf("Already divisible by 7");
+// }
+
+// ------------------------------------------------------------------------
+float totalCalories;
+printf("Write total calories in your food in grams : \n");
+scanf("%f",&totalCalories);
+while (totalCalories<0)
+{
+printf("Please make sure that the calories quantity are in positive\n");
+scanf("%f",&totalCalories);
+}
+float totalFat;
+printf("Write total fat in your food in grams : \n");
+scanf("%f",&totalFat);
+while (totalFat<0)
+{
+printf("Please make sure that the Fats quantity are in positive \n");
+scanf("%f",&totalFat);
+}
+
+float caloriesFromFat= 9*totalFat;
+if (caloriesFromFat>totalCalories)
+{
+      printf("Error: calories from fat exceed total calories. Please re-enter values.\n");
 }
 else
 {
-   printf("Already divisible by 7");
+float percentageOfCalories = (caloriesFromFat/totalCalories)*100;
+
+if (percentageOfCalories<30)
+{
+    printf("the total calorie from fats is %.2f %% \n" ,percentageOfCalories);
+    printf("Your diet is Low in Fat");
 }
+else
+{
+    printf("the total calorie from fats is %.2f %% \n" ,percentageOfCalories);
+    printf("Your diet is adequate in Fat\n");
+}    
+}
+
+
 
 
 
