@@ -45,6 +45,10 @@ void main(){
 
 int num1 = 2;
 int num2 = 6;
+
+
+
+
 for (int i = num2-1 ;  i >= num1 ; i--)
 {
 num2=num2+ i;
@@ -127,16 +131,6 @@ if (year % 4 == 0) {
 } else {
     printf("Not a leap year");
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

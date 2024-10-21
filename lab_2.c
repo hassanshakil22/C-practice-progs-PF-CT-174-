@@ -21,36 +21,6 @@ Beep(7000,180);
 Sleep(300);
 Beep(7000,150);
 Sleep(300);
-Beep(7000,100);
-Sleep(300);
-Beep(7000,80);
-Sleep(300);
-Beep(7000,80);
-Sleep(300);
-Beep(7000,80);
-Sleep(300);
-Beep(7000,80);
-Sleep(300);
-Beep(7000,50);
-Sleep(300);
-Beep(7000,40);
-Sleep(300);
-Beep(7000,30);
-Sleep(300);
-Beep(7000,20);
-Sleep(300);
-Beep(7000,20);
-Sleep(300);
-Beep(7000,20);
-Sleep(300);
-Beep(7000,20);
-Sleep(300);
-Beep(7000,20);
-Sleep(300);
-Beep(7000,20);
-Sleep(300);
-Beep(7000,300);
-
 
 // square
  printf("*************\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*\t\t\t*\n*************\n");     
