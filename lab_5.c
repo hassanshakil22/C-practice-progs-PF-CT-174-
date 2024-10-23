@@ -1,5 +1,16 @@
+#include <string.h> 
 #include<stdio.h>
-void  coffeeMakingTime(char coffee,char cupsize);
+// void  coffeeMakingTime(char coffee,char cupsize);
+struct item
+{
+    int price;
+char name[20];
+int quantity;
+};
+
+
+
+
 void main(){
 
 // // 
@@ -43,57 +54,146 @@ void main(){
 
 // coffeeMakingTime(coffee,cupSize);
 
-float ntsMarks;
-float fscMarks;
-printf("Enter your NTS marks /100 ");
-scanf("%f",&ntsMarks);
-printf("Enter your fsc marks /1100 ");
-scanf("%f",&fscMarks);
-float fsc =( fscMarks/1100)*100;
-float nts =( ntsMarks/100)*100;
+// float ntsMarks;
+// float fscMarks;
+// printf("Enter your NTS marks /100 ");
+// scanf("%f",&ntsMarks);
+// printf("Enter your fsc marks /1100 ");
+// scanf("%f",&fscMarks);
+// float fsc =( fscMarks/1100)*100;
+// float nts =( ntsMarks/100)*100;
 
 
-printf("your nts %%age %.2f%% \n",nts);
-printf("your fsc %%age %.2f%% \n",fsc);
+// printf("your nts %%age %.2f%% \n",nts);
+// printf("your fsc %%age %.2f%% \n",fsc);
 
-if (fsc>=70 )
+// if (fsc>=70 )
+// {
+//     if (nts>70)
+//     {
+//         printf("You're eligible for all the fields of Oxford and MIT (IT/Electronics/Telecommunication/Chemical/Computer) ");
+//     }
+//     else if (nts>60)
+//     {
+//         printf("You're eligible for all the fields of  MIT (IT/Chemical/Computer) and these fields of Oxford (Electronics/Telecommunication)");
+//     }
+// else if (nts>50)
+// {
+//         printf("You're eligible for all the fields of  MIT (IT/Chemical/Computer) and these fields of Oxford (Telecommunication)");
+
+// }
+// else
+// {
+//     printf("you have low marks in NTS :(");
+// }
+
+// }
+// else if (fsc>=60 && nts>=50)
+// {
+//         printf("You're eligible for all the fields of  MIT (IT/Chemical/Computer) and no fields of Oxford ");
+// }
+// else if (fsc>=50 && nts>=50)
+// {
+//         printf("You're eligible for these the fields of  MIT (Chemical/Computer) and no fields of Oxford ");
+// }
+// else if (fsc>=40 && nts>=50)
+// {
+//         printf("You're eligible for these the fields of  MIT (Computer) and no fields of Oxford ");
+// }
+
+// else
+// {
+//     printf("Low marks in fsc and nts");
+// }
+
+
+
+printf("Please select items from the following menu \n B = Burger (Rs. 200) \n F = French Fries (Rs. 50)\n P = Pizza (Rs. 500)\n S = Sandwiches (Rs. 150) \n");
+printf("How many types of snacks do you want to order ? : ");
+int typesOfSnack;
+scanf(" %d",&typesOfSnack);
+int total=0;
+int quantity;
+struct item order[typesOfSnack];
+for (int i = 1; i <= typesOfSnack ; i++)
 {
-    if (nts>70)
-    {
-        printf("You're eligible for all the fields of Oxford and MIT (IT/Electronics/Telecommunication/Chemical/Computer) ");
-    }
-    else if (nts>60)
-    {
-        printf("You're eligible for all the fields of  MIT (IT/Chemical/Computer) and these fields of Oxford (Electronics/Telecommunication)");
-    }
-else if (nts>50)
+char iterationName[30]; 
+switch (i)
 {
-        printf("You're eligible for all the fields of  MIT (IT/Chemical/Computer) and these fields of Oxford (Telecommunication)");
+case 1: 
+ strcpy(iterationName,"First") ;
+    break;
+case 2: 
+ strcpy(iterationName,"Second") ;
+    break;
+case 3: 
+ strcpy(iterationName,"Third") ;
+    break;
+case 4: 
+ strcpy(iterationName,"Fourth") ;
+    break;
+
+default:
+    break;
+}
+char type;
+    printf("Enter the %s snack you want to order : ",iterationName);
+    scanf(" %c",&type);
+    printf("\n Please provide the quantity :");
+    scanf(" %d",&quantity);
+    
+     switch (type) {
+            case 'B':
+                strcpy(order[i].name, "Burger");
+                order[i].quantity = quantity;
+                order[i].price = 200;
+              
+                break;
+            case 'F':
+                strcpy(order[i].name, "Fries");
+                order[i].quantity = quantity;
+                order[i].price = 50;
+
+                break;
+            case 'P':
+                strcpy(order[i].name, "Pizza");
+                order[i].quantity = quantity;
+                order[i].price = 500;
+                break;
+            case 'S':
+                strcpy(order[i].name, "Sandwich");
+                order[i].quantity = quantity;
+                order[i].price = 150;   
+                break;
+            default:
+                printf("Invalid snack type. Please enter B, F, P, or S.\n");
+                i--;  
+                continue;
+        }
+    
 
 }
-else
+
+printf("You have ordered !\n");
+for (int i = 1; i <= typesOfSnack; i++)
 {
-    printf("you have low marks in NTS :(");
+    int ammount= order[i].quantity*order[i].price;
+    printf("%d %s value %d PKR \n",order[i].quantity,order[i].name,ammount);
+    total=total+ammount;
 }
+printf("Total : %d PKR \nthank you for your order ! have a nice day",total);
 
-}
-else if (fsc>=60 && nts>=50)
-{
-        printf("You're eligible for all the fields of  MIT (IT/Chemical/Computer) and no fields of Oxford ");
-}
-else if (fsc>=50 && nts>=50)
-{
-        printf("You're eligible for these the fields of  MIT (Chemical/Computer) and no fields of Oxford ");
-}
-else if (fsc>=40 && nts>=50)
-{
-        printf("You're eligible for these the fields of  MIT (Computer) and no fields of Oxford ");
-}
 
-else
-{
-    printf("Low marks in fsc and nts");
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -104,6 +204,8 @@ else
 
 
 }
+
+
 
 // void coffeeMakingTime(char coffee,char cupsize){
 // int putWater ;
