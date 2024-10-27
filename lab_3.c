@@ -88,7 +88,7 @@ int TotalDistance=0;
 // scanf(" %f",&timePeriod);
 // if (timePeriod<1 || timePeriod>10)
 // {
-//     printf("Time Period must be between 1 To 10 years ");
+//     printf("Time Period must be between 1 To 10 years ");    
 //     return 0 ;
 // }
 
